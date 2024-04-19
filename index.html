@@ -1,0 +1,228 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<!-- url : "http://ziti3.com/qrcode/q/56/515", -->
+<!-- http://cdn2.ziti3.com/qrcode/uploaded/6b/08/6b7a527c8b466295d06784bfd105.txt -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, viewport-fit=cover">
+
+  <!-- Start of Baidu Transcode -->
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="MobileOptimized" content="width"/>
+  <meta name="HandheldFriendly" content="true"/>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn2.ziti9.com/qrcode/css/editor.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn2.ziti9.com/qrcode/css/article-common5.css">
+<link rel="stylesheet" type="text/css" href="https://cdn2.ziti9.com/qrcode/css/article_pc.css"><link rel="stylesheet" type="text/css" href="https://cdn2.ziti9.com/qrcode/css/article_android5.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn2.ziti9.com/qrcode/css/article_new2.css">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="二维码生成器">
+
+  <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=1262950947">
+  <!-- End -->
+
+<title>项目公示-东莞市力众环保检测有限....</title>    <script src="https://cdn2.ziti9.com/qrcode/js/jquery.js">
+    </script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js" type="text/javascript"></script>
+    <script src="https://cdn2.ziti9.com/qrcode/js/common5.js" type="text/javascript"></script>
+    <script src="https://cdn2.ziti9.com/qrcode/js/audio.js" type="text/javascript"></script>
+    <script src="https://cdn2.ziti9.com/qrcode/js/lazyload.js" type="text/javascript"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=e42f734d11bc3d0404e87e2ea0b23de0" type="text/javascript"></script>
+</head>
+
+  <body lang="zh-CN">
+
+  <div style="min-height:100vh;">
+        <div id="container" style="padding-bottom:70px;">
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;height:40px;width:100%;justify-content:space-between;">
+
+    <div id="fakeBtn" style="display:inline-block;height:40px;line-height: 40px;color:#333;font-size:small;width:0px;flex:1;text-align: left;"></div>
+
+    <div id="logo" style="display:inline-block;text-align:center;height:40px;line-height: 40px;color:#666666;font-size:small;width:0px;flex:2;text-align: center;">
+      由<a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.mike.erweima" style="color:#333333">二维码生成器</a>制作
+    </div>
+
+    <div id="reportBtn" style="display:inline-block;height:40px;line-height: 40px;color:#333333;font-size:small;width:0px;flex:1;text-align: right;">
+      <a style="color:#333333;font-size:small;" href="javascript:jubao()">举报</a>
+    </div>
+
+  </div>
+
+    <script>
+
+    var logo = $("#logo");
+    var fakeBtn = $("#fakeBtn")[0];
+
+    var targetUrl = "http://cdn2.ziti4.com//qrcode/uploaded2/36/20/09ss/f9/43bc831d4a502b7d2f3a02b6db8b0e.art";var urlId = "3702373";logo.hide();fakeBtn.innerHTML = "&nbsp;";
+    $(document).ready(function() {
+        $.ajax({
+            url : targetUrl,
+            dataType: "text",
+            success : function (data) {
+                data = data.replace(/cdn2.ziti4.com/g, "cdn2.ziti9.com");
+                var ishttps = 'https:' == document.location.protocol ? true: false;
+                if (ishttps)
+                {
+                  data = data.replaceAll("http://cdn2.ziti9.com", "https://cdn2.ziti9.com");
+                }
+                $("#container").html(data);
+                $("#container").ready(function(){
+                  initImagePreview();
+                  initMap();
+                  initVideo();
+                  $("img.lazy").lazyload({effect: "fadeIn"});
+                  var player = new MyAudioPlayer();
+
+
+                  var sections = document.getElementsByTagName('section');
+                  for (var i = sections.length - 1; i >= 0; i--) {
+                      (function(){
+                          var p = i;
+                          if (sections[p].style != undefined && sections[p].style.width == "100%" && sections[p].style.display == "inline-block")
+                          {
+                            console.log(sections[p].style);
+                            sections[p].style.width = "calc(100% - 50px)";
+                          }
+                      })()
+                  }
+                });
+            },
+            crossDomain: true
+        });
+       });
+
+
+    function initMapView(mapContainer)
+    {
+      var lontitude = $(mapContainer).attr('data-lon');
+      var latitude = $(mapContainer).attr('data-la');
+      var title = $(mapContainer).attr('data-title');
+      $(mapContainer).height($(window).width()*3/5);
+      var id = $(mapContainer).attr('id');
+      var map = new AMap.Map(mapContainer, {
+                zoom: 17,
+                center:[lontitude,latitude]
+            });
+
+      var marker = new AMap.Marker({
+          position: new AMap.LngLat(lontitude,latitude),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+          title: title
+      });
+      map.add(marker);
+
+      marker.on('click',function(e){
+          marker.markOnAMAP({
+              name:title,
+              position:marker.getPosition()
+          })
+      });
+
+      $(mapContainer).on('click',function(e){
+          marker.markOnAMAP({
+              name:title,
+              position:marker.getPosition()
+          })
+      });
+    }
+
+    function initVideo()
+    {
+      var videos = document.getElementsByTagName('video');
+      for (var i = videos.length - 1; i >= 0; i--) {
+          (function(){
+              var p = i;
+              videos[p].setAttribute("controlslist", "nodownload");
+              videos[p].setAttribute("playsinline", "true");
+              videos[p].setAttribute("webkit-playsinline", "true");
+              videos[p].removeAttribute("autoplay");
+              if (p = videos.length - 1)
+              {
+                videos[p].pause();
+              }
+              videos[p].addEventListener('play',function(){
+                  pauseAll(p);
+              })
+          })()
+      }
+      function pauseAll(index){
+          for (var j = videos.length - 1; j >= 0; j--) {
+              if (j!=index) videos[j].pause();
+          }
+      };
+    }
+
+    function initMap()
+    {
+      var mapContainers = $(".map_container");
+      console.log(mapContainers);
+      for (var i = 0; i < mapContainers.length; i++)
+      {
+        initMapView(mapContainers[i]);
+      }
+    }
+
+    function jubao()
+    {
+      $.ajax({
+        url:"https://"+window.location.host+"/qrcode/content/url_report.php",
+        type: "POST",
+        data:"url_id="+urlId,
+        success: function (data) {
+            var dic = JSON.parse(data);
+            if (dic.succ == 1)
+            {
+              alert("举报成功");
+              return;
+            }
+        }
+      });
+    }
+
+    function openDoc(url, fileType)
+    {
+      if (window.__wxjs_environment === 'miniprogram')
+      {
+        wx.miniProgram.navigateTo({
+            url:'/pages/qr/qr?q='+encodeURIComponent(url),
+            success: function(){
+                console.log('success')
+            },
+            fail: function(){
+                console.log('fail');
+            },
+            complete:function(){
+                console.log('complete');
+            }
+
+            });
+      }
+      else
+      {
+        window.location.href = url;
+      }
+    }
+
+    </script>
+
+  </body>
+
+ </html>
